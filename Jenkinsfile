@@ -13,10 +13,10 @@ pipeline {
      }
     }
   }
-}
 
   post {
     always {
       sh 'echo Post Cleanup steps'
     }
   }
+}
