@@ -10,7 +10,7 @@ pipeline {
     SAMPLE_URL = "example.com"
   }
 
-  parameter {
+  parameters {
     string(name: 'PERSON', defaultValue: 'MR Jenkins', description: 'who should i say Hello to?')
   }
 
