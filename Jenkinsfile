@@ -18,6 +18,10 @@ pipeline {
 
   stages {
     stage('one'){
+     inputs{
+       message "DO you Approve?"
+       ok "Yes"
+     }
      steps {
        sh 'echo Hello World'
        sh 'echo Hello Sandeep'
@@ -26,6 +30,15 @@ pipeline {
      }
     }
   }
+
+    stage('Two'){
+     when {
+       GIT_BRANCH == "origin/test"
+     }
+     steps {
+       sh 'env'
+     }
+    }
 
   post {
     always {
