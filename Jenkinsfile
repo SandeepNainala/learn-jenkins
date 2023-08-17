@@ -20,4 +20,3 @@ pipeline {
       sh 'echo Post Cleanup steps'
     }
   }
-}
