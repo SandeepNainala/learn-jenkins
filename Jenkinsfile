@@ -1,9 +1,13 @@
 pipeline {
 
-  agent any
+  agent {
+    node {
+      label 'workstation'
+    }
+  }
 
   options {
-    ansiColor('Xterm')
+    ansiColor('xterm')
   }
 
   environment {
